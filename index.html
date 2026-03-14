@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen R - Chemical Engineering Portfolio</title>
+    <meta name="description" content="Portfolio of Praveen R, a Chemical Engineering student passionate about sustainable technologies, research innovation, and industrial process engineering.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <!-- Custom Cursor -->
+    <div class="cursor-glow"></div>
+    
+    <!-- Background Particles Canvas -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <a href="#hero" class="nav-brand">PR.</a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" aria-label="Toggle Mobile Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    
+    <div class="mobile-menu">
+        <button class="close-menu-btn"><i class="fas fa-times"></i></button>
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#education" class="mobile-nav-link">Education</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="profile-container reveal">
+                    <div class="profile-frame">
+                        <img src="assets/profile_pic.jpg" alt="Praveen R Profile Picture" id="profileImage">
+                    </div>
+                    <div class="floating-badge badge-1"><i class="fas fa-flask"></i></div>
+                    <div class="floating-badge badge-2"><i class="fas fa-leaf"></i></div>
+                    <div class="floating-badge badge-3"><i class="fas fa-atom"></i></div>
+                </div>
+                
+                <h1 class="reveal delay-1">Praveen R</h1>
+                
+                <div class="typing-container reveal delay-2">
+                    <span class="static-text">I am a </span>
+                    <span id="typing-text" class="typed-text"></span><span class="cursor">&nbsp;</span>
+                </div>
+                
+                <p class="hero-intro reveal delay-3">
+                    Motivated and detail-oriented second-year Chemical Engineering student with strong knowledge in material and energy balances, reaction engineering fundamentals, and process calculations. Passionate about industrial processes, sustainability, and chemical innovation.
+                </p>
+                
+                <div class="hero-buttons reveal delay-4">
+                    <a href="#projects" class="btn btn-primary glow-effect">
+                        <i class="fas fa-eye"></i> View Projects
+                    </a>
+                    <a href="https://cold-sky-500.linkyhost.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary glass-btn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down-indicator">
+                <span>Discover More</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about" class="about-section pt-section pb-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="gradient-text">About Me</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text-content reveal">
+                        <h3 class="subsection-title">Driven by Innovation & Sustainability</h3>
+                        <p>
+                            I am a driven engineering student focused on applying theoretical chemical engineering principles to real industrial challenges. My goal is to bridge the gap between academic knowledge and practical solutions.
+                        </p>
+                        <p>
+                            Throughout my academic journey, I have developed a keen interest in analyzing processes and finding ways to make them more efficient and environmentally friendly. I believe that chemical engineering holds the key to solving many of today's sustainability challenges.
+                        </p>
+                    </div>
+                    
+                    <div class="interests-grid glass-card reveal delay-2">
+                        <h3 class="card-title">Key Interests</h3>
+                        <div class="interest-items">
+                            <div class="interest-item">
+                                <div class="interest-icon"><i class="fas fa-recycle text-green"></i></div>
+                                <span>Sustainable Chemical Processes</span>
+                            </div>
+                            <div class="interest-item">
+                                <div class="interest-icon"><i class="fas fa-burn text-cyan"></i></div>
+                                <span>Hydrogen Production</span>
+                            </div>
+                            <div class="interest-item">
+                                <div class="interest-icon"><i class="fas fa-water text-blue"></i></div>
+                                <span>Wastewater Treatment Technologies</span>
+                            </div>
+                            <div class="interest-item">
+                                <div class="interest-icon"><i class="fas fa-cogs text-purple"></i></div>
+                                <span>Industrial Process Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Education Section -->
+        <section id="education" class="education-section pt-section pb-section dark-alt-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="gradient-text">Education Journey</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="timeline">
+                    <!-- College -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot glow-dot"></div>
+                        <div class="timeline-content glass-card hover-glow">
+                            <div class="timeline-date">2024 &ndash; 2028</div>
+                            <h3>Bachelor of Technology &ndash; Chemical Engineering</h3>
+                            <h4 class="institution">Rajalakshmi Engineering College, Chennai</h4>
+                            <p class="affiliation">Anna University Affiliated</p>
+                            <div class="score-badge">Current CGPA: <span>8.50/10</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Higher Secondary -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card hover-glow">
+                            <div class="timeline-date">2016 &ndash; 2024</div>
+                            <h3>Higher Secondary Education</h3>
+                            <h4 class="institution">Madras Christian College Higher Secondary School</h4>
+                            <div class="scores-grid mt-3">
+                                <div class="score-box">
+                                    <span class="score-label">12th Grade</span>
+                                    <span class="score-value text-cyan">89%</span>
+                                </div>
+                                <div class="score-box">
+                                    <span class="score-label">10th Grade</span>
+                                    <span class="score-value text-blue">89.9%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Experience Section -->
+        <section id="experience" class="experience-section pt-section pb-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="gradient-text">Experience & Involvement</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="cards-grid">
+                    <!-- IIChE -->
+                    <div class="experience-card glass-card hover-lift reveal delay-1">
+                        <div class="card-glow-bg bg-gradient-blue"></div>
+                        <div class="card-icon-header">
+                            <div class="icon-box bg-blue-translucent text-cyan">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <span class="date-tag">Feb 2026 &ndash; Present</span>
+                        </div>
+                        <h3>Student Member</h3>
+                        <h4 class="org-name">Indian Institute of Chemical Engineers (IIChE)</h4>
+                        <p class="card-desc">Active participant in workshops, seminars, and technical discussions surrounding modern chemical engineering practices.</p>
+                    </div>
+
+                    <!-- Rotaract -->
+                    <div class="experience-card glass-card hover-lift reveal delay-2">
+                        <div class="card-glow-bg bg-gradient-purple"></div>
+                        <div class="card-icon-header">
+                            <div class="icon-box bg-purple-translucent text-purple">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <span class="date-tag">Aug 2025 &ndash; Present</span>
+                        </div>
+                        <h3>Club Coordinator</h3>
+                        <h4 class="org-name">Rotaract Club &ndash; Rajalakshmi Engineering College</h4>
+                        <p class="card-desc">Organizing technical and non-technical events, managing team dynamics, and contributing to community building initiatives.</p>
+                    </div>
+
+                    <!-- Nippon Paint -->
+                    <div class="experience-card glass-card hover-lift reveal delay-3">
+                        <div class="card-glow-bg bg-gradient-green"></div>
+                        <div class="card-icon-header">
+                            <div class="icon-box bg-green-translucent text-green">
+                                <i class="fas fa-paint-roller"></i>
+                            </div>
+                            <span class="date-tag">Dec 2025 &ndash; Jan 2026</span>
+                        </div>
+                        <h3>Internship Trainee</h3>
+                        <h4 class="org-name">Nippon Paint India</h4>
+                        <p class="card-desc">Gained practical exposure to polymer chemistry, paint manufacturing processes, quality control, and industrial safety protocols.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Skills Section -->
+        <section id="skills" class="skills-section pt-section pb-section dark-alt-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="gradient-text">Skill Arsenal</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="skills-container wrapper">
+                    
+                    <!-- Hard Skills -->
+                    <div class="skills-category reveal">
+                        <h3 class="category-title mb-4"><i class="fas fa-laptop-code text-cyan mr-2"></i> Technical Expertise</h3>
+                        <div class="skill-bars">
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Material & Energy Balance</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="progress-line" data-percent="95%">
+                                    <span class="bg-cyan"></span>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Process Flow Diagram</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="progress-line" data-percent="90%">
+                                    <span class="bg-blue"></span>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Stoichiometric Calculations</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="progress-line" data-percent="92%">
+                                    <span class="bg-purple"></span>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Fluid Mechanics / Mass & Heat Transfer</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="progress-line" data-percent="85%">
+                                    <span class="bg-green"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Laboratory Safety</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="progress-line" data-percent="95%">
+                                    <span class="bg-orange"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="software-tools mt-5">
+                            <h4 class="mb-3">Software & Tools</h4>
+                            <div class="tools-grid">
+                                <div class="tool-badge"><i class="fab fa-python text-yellow"></i> Basic Python</div>
+                                <div class="tool-badge"><i class="fas fa-file-excel text-green"></i> Excel</div>
+                                <div class="tool-badge"><i class="fas fa-file-word text-blue"></i> Word</div>
+                                <div class="tool-badge"><i class="fas fa-file-powerpoint text-orange"></i> PowerPoint</div>
+                                <div class="tool-badge badge-design"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="PS" class="icon-sm"> Photoshop</div>
+                                <div class="tool-badge badge-design"><i class="fas fa-video text-purple"></i> DaVinci Resolve</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skills-category reveal delay-2">
+                        <h3 class="category-title mb-4"><i class="fas fa-brain text-purple mr-2"></i> Soft Skills</h3>
+                        <div class="circular-skills-grid">
+                            
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-value="95" style="--clr: #06b6d4;">
+                                    <div class="inner-circle">
+                                        <i class="fas fa-puzzle-piece text-cyan"></i>
+                                    </div>
+                                </div>
+                                <span class="skill-label">Problem Solving</span>
+                            </div>
+
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-value="85" style="--clr: #8b5cf6;">
+                                    <div class="inner-circle">
+                                        <i class="fas fa-crown text-purple"></i>
+                                    </div>
+                                </div>
+                                <span class="skill-label">Leadership</span>
+                            </div>
+
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-value="90" style="--clr: #3b82f6;">
+                                    <div class="inner-circle">
+                                        <i class="fas fa-users text-blue"></i>
+                                    </div>
+                                </div>
+                                <span class="skill-label">Teamwork</span>
+                            </div>
+
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-value="92" style="--clr: #22c55e;">
+                                    <div class="inner-circle">
+                                        <i class="fas fa-sync text-green"></i>
+                                    </div>
+                                </div>
+                                <span class="skill-label">Adaptability</span>
+                            </div>
+                            
+                            <div class="circular-skill">
+                                <div class="circular-progress" data-value="88" style="--clr: #f59e0b;">
+                                    <div class="inner-circle">
+                                        <i class="fas fa-hourglass-half text-orange"></i>
+                                    </div>
+                                </div>
+                                <span class="skill-label">Time Management</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Projects Section -->
+        <section id="projects" class="projects-section pt-section pb-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="gradient-text">Featured Research</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="project-showcase glass-card hover-glow-border reveal">
+                    <div class="project-grid">
+                        <div class="project-image-container">
+                            <div class="image-overlay"></div>
+                            <img src="assets/project_illustration.png" alt="Wastewater Treatment and Hydrogen Production" class="project-img">
+                            <div class="floating-tech-badges">
+                                <span class="tech-badge"><i class="fas fa-sun text-yellow"></i> Solar</span>
+                                <span class="tech-badge"><i class="fas fa-water text-cyan"></i> H₂O</span>
+                                <span class="tech-badge"><i class="fas fa-atom text-purple"></i> Nano</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-info">
+                            <div class="project-type text-cyan text-sm fw-600 tracking-wider mb-2">RESEARCH PROJECT</div>
+                            <h3 class="project-title mb-3">
+                                Development of a Self-Regenerating Solar Magneto-Photocatalytic Biochar Nanocomposite for Integrated Wastewater Treatment and Hydrogen Production
+                            </h3>
+                            
+                            <p class="project-desc mb-4 text-light-gray">
+                                This research project focuses on designing an advanced photocatalytic nanocomposite capable of simultaneously purifying wastewater and generating hydrogen energy using solar power. It aims to provide a sustainable, dual-action solution strictly aligned with green chemistry principles.
+                            </p>
+                            
+                            <div class="tech-stack mb-5">
+                                <span class="tag">#Photocatalysis</span>
+                                <span class="tag">#Nanomaterials</span>
+                                <span class="tag">#Renewable Energy</span>
+                                <span class="tag">#Wastewater Treatment</span>
+                                <span class="tag">#Hydrogen Production</span>
+                            </div>
+                            
+                            <a href="#" id="readAbstractBtn" class="btn btn-primary glow-effect d-inline-flex btn-icon">
+                                Read Abstract <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Opportunities Section -->
+        <section id="opportunities" class="opportunities-section pt-section pb-section dark-alt-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <h2 class="gradient-text justify-center">Collaboration & Services</h2>
+                    <p class="section-subtitle">Open to new challenges and opportunities to apply my skills.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card glass-card hover-lift text-center reveal">
+                        <div class="service-icon-wrapper bg-blue-translucent text-blue">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Chemical Industry Internships</h3>
+                        <p>Seeking roles to gain hands-on industrial experience in operations, safety, and process design.</p>
+                    </div>
+                    
+                    <div class="service-card glass-card hover-lift text-center reveal delay-1">
+                        <div class="service-icon-wrapper bg-purple-translucent text-purple">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Research Collaborations</h3>
+                        <p>Available to collaborate on academic and industrial research, particularly in sustainability and green energy.</p>
+                    </div>
+                    
+                    <div class="service-card glass-card hover-lift text-center reveal delay-2">
+                        <div class="service-icon-wrapper bg-cyan-translucent text-cyan">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation Projects</h3>
+                        <p>Interested in joining teams developing novel technological solutions to engineering problems.</p>
+                    </div>
+                    
+                    <div class="service-card glass-card hover-lift text-center reveal delay-3">
+                        <div class="service-icon-wrapper bg-green-translucent text-green">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>Industrial Training</h3>
+                        <p>Eager to participate in specialized industrial training programs to build core competencies.</p>
+                    </div>
+                    
+                    <div class="service-card glass-card hover-lift text-center reveal delay-4 mx-auto grid-col-span-full-sm max-w-sm">
+                        <div class="service-icon-wrapper bg-orange-translucent text-orange">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Technical Report Preparation</h3>
+                        <p>Offering assistance in preparing technical blueprints, process flow diagrams, and detailed research reports.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact Section -->
+        <section id="contact" class="contact-section pt-section pb-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="gradient-text">Get In Touch</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="contact-wrapper glass-card reveal">
+                    <div class="contact-info-panel bg-gradient-brand">
+                        <h3 class="mb-4 text-white">Contact Information</h3>
+                        <p class="text-white-80 mb-5">Feel free to reach out for research discussions, internship opportunities, or just a friendly chat!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <span class="label">Email</span>
+                                    <a href="mailto:praveenyt872@gmail.com" class="value hover-text-cyan">praveenyt872@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="contact-text">
+                                    <span class="label">Phone</span>
+                                    <a href="tel:+916383926162" class="value hover-text-cyan">+91 6383926162</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-text">
+                                    <span class="label">Location</span>
+                                    <span class="value">Egmore, Chennai, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links-panel mt-5">
+                            <h4 class="mb-3 text-white text-sm uppercase tracking-wider">Connect</h4>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/praveen-r-78ba26330" target="_blank" rel="noopener noreferrer" class="social-icon hover-glow-icon" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/praveenyt872" target="_blank" rel="noopener noreferrer" class="social-icon hover-glow-icon" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon hover-glow-icon" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel">
+                        <h3 class="mb-4">Send a Message</h3>
+                        <form id="contactForm" action="https://formsubmit.co/praveenyt872@gmail.com" method="POST">
+                            <!-- Optional: redirect to a specific page or disable captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="New Portfolio Contact Message!">
+                            
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" class="input-field" required placeholder=" ">
+                                <label for="name" class="input-label">Your Name</label>
+                            </div>
+                            
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" class="input-field" required placeholder=" ">
+                                <label for="email" class="input-label">Your Email</label>
+                            </div>
+                            
+                            <div class="input-group">
+                                <input type="text" id="subject" name="subject" class="input-field" required placeholder=" ">
+                                <label for="subject" class="input-label">Subject</label>
+                            </div>
+                            
+                            <div class="input-group full-width">
+                                <textarea id="message" name="message" class="input-field textarea-field" required placeholder=" " rows="4"></textarea>
+                                <label for="message" class="input-label">Message</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary glow-effect submit-btn mt-3 w-100">
+                                <span>Send Message</span> <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abstract Modal -->
+        <div id="abstractModal" class="modal-overlay">
+            <div class="modal-content glass-card">
+                <button class="close-modal-btn"><i class="fas fa-times"></i></button>
+                <div class="modal-header">
+                    <h3 class="gradient-text mb-2">Project Abstract</h3>
+                    <h4 class="text-sm text-cyan tracking-wider fw-600 mb-4">Development of a Self-Regenerating Solar Magneto-Photocatalytic Biochar Nanocomposite for Integrated Wastewater Treatment and Hydrogen Production</h4>
+                </div>
+                <div class="modal-body custom-scrollbar">
+                    <p>Industrial wastewater (IWW) containing persistent organic pollutants (OPs), synthetic dyes, pharmaceutical residues, and toxic heavy metals (HMs) represents a major environmental challenge. Conventional wastewater treatment (CWT) technologies often rely on multi-step processes that increase operational costs and energy consumption while failing to achieve complete pollutant removal.</p>
+                    <p>In this study, a solar-driven magneto-photocatalytic biochar nanocomposite (MPBN) is proposed for simultaneous wastewater remediation and hydrogen (H₂) generation. The multifunctional catalyst consists of biochar (BC) derived from agricultural biomass as a porous support integrated with magnetic iron oxide nanoparticles (Fe₃O₄ MNPs), titanium dioxide (TiO₂) semiconductor photocatalyst, and graphene-based conductive layers (G) to enhance electron transport and catalytic efficiency.</p>
+                    <p>The BC matrix provides a high-surface-area adsorption platform for capturing HMs and OPs through surface interactions, while TiO₂ nanoparticles act as the primary photocatalyst under solar irradiation (SI). Upon light activation, electron–hole pairs are generated, producing reactive oxygen species (ROS) such as hydroxyl radicals (•OH) and superoxide radicals (O₂•⁻), which degrade organic contaminants through photocatalysis (PC).</p>
+                    <p>Simultaneously, photoexcited electrons drive the hydrogen evolution reaction (HER), enabling sustainable H₂ generation. The incorporation of Fe₃O₄ nanoparticles enables rapid catalyst recovery via magnetic separation (MS), improving catalyst reusability and process sustainability. The study evaluates catalyst synthesis (CS), structural characterization, adsorption capacity, pollutant degradation efficiency (PDE), hydrogen production performance (HPP), and long-term catalyst stability. The proposed hybrid system offers a promising integrated strategy for coupling environmental remediation with renewable energy production.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 10. Footer -->
+    <footer class="main-footer">
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container footer-content">
+            <div class="footer-brand mb-4 text-center">
+                <h2>Praveen R</h2>
+                <p class="text-cyan">Future Process Engineer & Innovator</p>
+            </div>
+            
+            <div class="footer-links mb-4 text-center">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="footer-socials mb-4 text-center">
+                <a href="https://www.linkedin.com/in/praveen-r-78ba26330" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:praveenyt872@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <div class="copyright text-center">
+                <p>&copy; 2026 Praveen R &ndash; Chemical Engineering Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
